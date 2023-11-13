@@ -1,0 +1,44 @@
+env.properties
+
+# Ignore target/ directory and all of its contents
+target/
+
+# Ignore Maven build directory
+*/target/
+
+# Ignore IntelliJ IDEA files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Ignore Eclipse files
+.classpath
+.project
+.settings/
+
+# Ignore NetBeans files
+/nbproject/
+/dist/
+/*.jar
+/build/
+/nbdist/
+
+# Ignore Visual Studio Code files
+.vscode/
+
+# Ignore STS (Spring Tool Suite) files
+.apt_generated
+.sts4-cache
+
+# Ignore logs
+logs/
+
+
+# Ignore Spring Boot wrapper
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Ignore Mac specific files
+.DS_Store
+
