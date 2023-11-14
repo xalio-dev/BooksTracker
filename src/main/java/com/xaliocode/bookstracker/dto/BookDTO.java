@@ -1,7 +1,6 @@
-package com.xaliocode.bookstracker.entity;
+package com.xaliocode.bookstracker.dto;
 
-
-import jakarta.persistence.*;
+import com.xaliocode.bookstracker.entity.Category;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,33 +8,16 @@ import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
-@Entity
-@Table
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Book {
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+public class BookDTO {
 	private int id;
-
-	@ManyToOne(cascade = CascadeType.ALL)
-	private User user;
-
-	@Column(nullable = false)
 	private String title;
-
 	private String author;
-
-	@Enumerated(EnumType.STRING)
 	private Category category;
-
-	@Column(nullable = false)
 	private boolean completed;
-
 	private Date startedAt;
-
 	private int currentPage;
 }
