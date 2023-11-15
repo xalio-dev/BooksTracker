@@ -27,6 +27,9 @@ public class Book {
 	@Column(nullable = false)
 	private String title;
 
+	@Column(nullable = false)
+	private String description;
+
 	private String author;
 
 	@Enumerated(EnumType.STRING)
